@@ -1,0 +1,97 @@
+
+body {
+	font-family:'Open Sans', Arial, sans-serif;
+	font-weight:300;
+	line-height:1.6em;
+	color:#656565;
+	font-size: 1.4em;
+}
+
+a:active {
+	outline:0;
+}
+
+.clear {
+	clear:both;
+}
+
+h1,h2{
+	font-weight: 600;
+	line-height:1.1em;
+	color: #37393c;
+	font-family: 'Droid Sans', sans-serif;
+	margin-bottom: 20px;
+	text-transform: uppercase;
+}
+.flex-caption h3{
+	font-family: 'Droid Sans', sans-serif;
+}
+h3, h4, h5, h6 {
+	line-height:1.1em;
+	color: #000000;
+	margin-bottom: 20px;
+	font-family: 'Droid Sans', sans-serif;
+	font-weight: 600;
+}
+.col-lg-1{
+	width: 100%;
+	height: 100px;
+	background-color: darkkhaki;
+	text-align: center;
+	padding-top: 30px;
+	margin-top: 30px;
+}
+.box-content {
+    color: #5d5d5d;
+    border: 1px solid #e3e3e3;
+    padding: 10px;
+    font-size: 14px;
+    box-shadow: 1px 1px 0px 0px rgba(0, 0, 0, 0.09);
+}
+.box-content a:hover {
+    text-decoration: none;
+} 
+.box-content a {
+    color: #5d5d5d;
+}
+.box-content h3 {
+    color: #237e85;
+    font-size: 18px;
+    font-weight: bold;
+    border-bottom: dashed 1px #c7c7c7;
+    padding-bottom: 18px;
+}
+input, button, select, textarea { 
+    border-radius: 0px;
+}
+p.help-block ul li {
+    color: red;
+    text-decoration: none;
+    margin-left: -16px;
+    padding: 0px;
+}
+
+@media only screen and (max-width:800px){
+    nav ul{
+        position: absolute;
+        top: 70px;
+        left: 0;
+        background:#333;
+        width: 100%;
+        overflow: hidden;
+        transition: max-height 0.5s;
+    }
+    nav ul li{
+        display: block;
+        margin-top:10px ;
+        margin-right: 50px;
+        margin-bottom: 10px;
+    }
+    nav ul li a{
+        color: #fff;
+    }
+    .menu-icon{
+        display: block;
+    }
+}
+
