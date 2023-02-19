@@ -1,4 +1,4 @@
-ame: Deploy to Amazon EKS
+Name: Deploy to Amazon EKS
 
 on:
   push:
