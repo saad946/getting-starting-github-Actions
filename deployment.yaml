@@ -1,0 +1,64 @@
+apiVersion: apps/v1
+kind: Deployment
+
+metadata:
+  name:  ecom-deploy
+  namespace: default
+  labels:
+    app:  ecom-deploy
+
+spec:
+  selector:
+    matchLabels:
+      app: ecom-deploy
+
+  replicas: 1
+
+  strategy:
+    rollingUpdate:
+      maxSurge: 25%
+      maxUnavailable: 25%
+    type: RollingUpdate
+
+  template:
+    metadata:
+      labels:
+        app:  ecom-deploy
+
+    spec:
+      containers:
+      - name:  ecom-cont
+        image:  ecommerce01:latest
+        imagePullPolicy: IfNotPresent 
+        # resources:
+        #   requests:
+        #     cpu: "1"
+        #     memory: 200Mi
+        #   limits:
+        #     cpu: "20"
+        #     memory: 1Gi
+
+
+        ports:
+        - containerPort:  9000
+          name:  ecom-cont
+
+      restartPolicy: Always
+
+---
+
+apiVersion: v1
+kind: Service
+metadata:
+  name: ecom-svc
+  namespace: default
+spec:
+  selector:
+    app: ecom-deploy
+  type: LoadBalancer
+  ports:
+  - protocol: TCP
+    # this service will expose this port
+    port: 8000
+    # Port we're targeting on the pod container
+    targetPort: 9000
