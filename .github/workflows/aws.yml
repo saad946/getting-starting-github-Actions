@@ -10,7 +10,7 @@ permissions:
 
 jobs:
   deploy:
-    name: Deploy
+    name: Deployment
     runs-on: self-hosted
 
 
