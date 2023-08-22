@@ -34,7 +34,7 @@ jobs:
         run: sh ./github_action.sh
   build-2:
     name: Build Docker1
-    runs-on: shared-service
+    runs-on: ubuntu-20.04-16core
     steps:
     - name: Checkout
       uses: actions/checkout@v2
