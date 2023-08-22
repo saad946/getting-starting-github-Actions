@@ -19,7 +19,7 @@ jobs:
   
   build-1:
     # The type of runner that the job will run on
-    runs-on: ubuntu-20.04-16core
+    runs-on: ubuntu-22.04
     # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
@@ -34,7 +34,7 @@ jobs:
         run: sh ./github_action.sh
   build-2:
     name: Build Docker1
-    runs-on: ubuntu-20.04-16core
+    runs-on: ubuntu-22.04
     steps:
     - name: Checkout
       uses: actions/checkout@v2
@@ -44,7 +44,7 @@ jobs:
         docker build -t test .
   build-3:
     name: Build Docker2
-    runs-on: ubuntu-20.04-16core
+    runs-on: ubuntu-22.04
     steps:
     - name: Checkout
       uses: actions/checkout@v2
